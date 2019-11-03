@@ -1,0 +1,16 @@
+.main-page-carousel{
+    width: 500px;
+}
+
+.main-contain{
+    border: 1px solid black;
+}
+
+.img-parent img{
+    width: 100%;
+    /* margin: 10px; */
+}
+
+.pad{
+    padding: 10px;
+}
