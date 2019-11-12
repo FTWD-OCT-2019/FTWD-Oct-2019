@@ -1,0 +1,8 @@
+[
+    {"name": "bulbasaur", "number": 1, "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"},
+    {"name": "feraligatr", "number": 160, "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png"},
+    {"name": "snorlax", "number": 143, "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"},
+    {"name": "greninja", "number": 658, "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png"},
+    {"name": "chandelure", "number": 609, "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"},
+    {"name": "blaziken", "number": 257, "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png"}
+]
