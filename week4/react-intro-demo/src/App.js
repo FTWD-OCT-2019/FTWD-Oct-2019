@@ -4,6 +4,8 @@ import User from './components/user-component/user';
 
 import Animals from './components/animals/animals';
 
+import PokemonList from './components/pokemonList/pokemonList'
+
 class App extends React.Component {
   // we just created a new html tag called <App>
 
@@ -88,7 +90,7 @@ class App extends React.Component {
         raveBoxStyle: currentStyle,
         raveText: newWord
       })
-   }
+   }  
 
    
 
@@ -114,11 +116,17 @@ class App extends React.Component {
 
 
               <User theUser = {this.state.user} />
-              
 
+              <div style={{float: 'left'}}>
               <Animals />
 
+              </div>
+              
 
+            <div style={{float: 'right', margin: '80px'}}>
+              <PokemonList />
+
+            </div>
 
             </div>
             );
