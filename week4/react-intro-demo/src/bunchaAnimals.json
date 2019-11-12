@@ -1,0 +1,14 @@
+[
+{"name": "dog", "weight": 80},
+{"name": "hyena", "weight": 160},
+{"name": "hipp", "weight": 4000},
+{"name": "horse", "weight": 1200},
+{"name": "moose", "weight": 2100},
+{"name": "mouse", "weight": 1},
+{"name": "rabbit", "weight": 4},
+{"name": "kimodo dragon", "weight": 70},
+{"name": "alligator", "weight": 300},
+{"name": "gecko", "weight": 0},
+{"name": "gorilla", "weight": 300},
+{"name": "elephant", "weight": 10000}
+]

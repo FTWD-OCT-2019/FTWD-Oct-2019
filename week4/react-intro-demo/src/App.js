@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
 import User from './components/user-component/user';
+
+import Animals from './components/animals/animals';
 
 class App extends React.Component {
   // we just created a new html tag called <App>
 
-  user = {firstName: 'nick', lastName: 'borbe'}
+  constructor(props){
+    super(props);
+    this.state = {
+      user: null,
+    }
+
+  }
 
 
 
@@ -13,14 +21,20 @@ class App extends React.Component {
      console.log('user is', this.user)
      console.log('logging in');
 
-    this.user = {firstName: 'nick', lastName: 'borbe'}
+     this.setState({
+       user: {firstName: 'nick', lastName: 'borbe'},
+     })
 
-    console.log('user is', this.user)
    }
 
    logMeOut = () =>{
-     this.user = null;
+
+    this.setState({
+      user: null,
+    })
    }
+
+   
 
 
 
@@ -30,12 +44,25 @@ class App extends React.Component {
           return (
             <div>
 
+              <button id="grad1"> Rave Time!</button>
 
+              <div className="ravebox" style={this.state.raveBoxStyle}>
+
+                Rave
+              </div>
 
               <button onClick = {this.logMeIn}>Login</button>
+              <button onClick = {this.logMeOut}>Logout</button>
 
-              <User theUser = {this.user} />
-              we will always show no one is logged in because render only runs once because we are not using state yet
+
+
+              <User theUser = {this.state.user} />
+              
+
+              <Animals />
+
+
+
             </div>
             );
       }

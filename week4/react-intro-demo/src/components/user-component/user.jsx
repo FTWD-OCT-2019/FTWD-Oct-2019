@@ -4,6 +4,7 @@ import React from 'react';
 
 class User extends React.Component{
 
+
     
     render(){
         let blah = {};
@@ -19,20 +20,34 @@ class User extends React.Component{
 
 
 
-        if(this.props.theUser){
+       
             return(
-    
-        <h1 className="yesLoggedIn" >Welcome {this.props.theUser.firstName} {this.props.theUser.lastName}</h1>
+                <div>
+                { this.props.theUser &&  
+                <h1 className="yesLoggedIn" >
+                        Welcome {this.props.theUser.firstName} {this.props.theUser.lastName}
+                </h1> 
+                }
+
+
+
+            {!this.props.theUser &&   
+                <h1 className="notLoggedIn" >
+                    Sorry, no one logged in right now
+                </h1>  
+            }
+
+
+                </div>
+
             )
 
-        } else {
-            return(
-                <h3 className='notLoggedIn'>No one currently logged in</h3>
-            )
+   
+           
         }
 
 
-    }
+    
 
 
 
