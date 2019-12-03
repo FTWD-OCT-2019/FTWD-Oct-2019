@@ -1,0 +1,23 @@
+this is the buncha books page
+
+
+{{#each theBooks}}
+
+<div>
+    <a href="/books/{{this._id}}">
+
+        <h3>
+            Title:
+            {{this.title}}
+        </h3>
+    </a>
+
+    <h5>By: {{this.author}}</h5>
+</div>
+
+
+
+
+<hr>
+
+{{/each}}
