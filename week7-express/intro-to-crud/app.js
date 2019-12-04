@@ -8,6 +8,8 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const session      = require("express-session");
+const MongoStore   = require("connect-mongo")(session);
 
 
 mongoose.Promise = Promise;
@@ -51,8 +53,28 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 
+app.use(session({
+  secret: "qwlfblfblfqlfqbdlfjhbl",
+  cookie: { maxAge: 60000 },
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+    ttl: 24 * 60 * 60 
+  })
+}));
+
+
+app.use((req, res, next)=>{
+  res.locals.user = req.session.currentUser;
+  next();
+})
+// this is how you add a template variable called 'user' to all your views all at the same time so you dont have to go around passing the user into each view separately
+
+
+
 const bookRoutes = require('./routes/book-routes');
 app.use('/', bookRoutes);
 
+const userRoutes = require('./routes/user-routes');
+app.use('/', userRoutes);
 
 module.exports = app;

@@ -7,7 +7,7 @@ const bookSchema = new Schema({
     title: {type: String},
     author: String,
     // shorthand  ^ and regular version 
-    image: String
+    image: String,
 })
 
 const Book = mongoose.model("Book", bookSchema)

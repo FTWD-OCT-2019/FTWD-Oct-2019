@@ -9,7 +9,20 @@
 
 <div>
   <a href="/">Home</a>
-  <a href="/add-new-book">New Book</a>
+  <a href="/books/create">New Book</a>
+  {{#if user}}
+  <form action="/logout" method="POST">
+  <button>Logout</button>
+  </form>
+
+  {{else}}
+
+  <a href="/login">login</a>
+  <a href="/signup">signup</a>
+
+  {{/if}}
+
+
 </div>
     {{{body}}}
 
