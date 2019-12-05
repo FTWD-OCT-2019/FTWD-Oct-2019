@@ -77,4 +77,9 @@ app.use('/', bookRoutes);
 const userRoutes = require('./routes/user-routes');
 app.use('/', userRoutes);
 
+const authorRoutes = require('./routes/author-routes');
+app.use('/authors', authorRoutes);
+// this means every single route in that file is going to start with '/authors'
+
+
 module.exports = app;
