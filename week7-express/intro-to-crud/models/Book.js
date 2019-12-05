@@ -5,9 +5,10 @@ const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
     title: {type: String},
-    author: String,
+    author: {type: Schema.Types.ObjectId, ref: "Author"},
     // shorthand  ^ and regular version 
     image: String,
+    donor: {type: Schema.Types.ObjectId, ref: "User", required: true},
 })
 
 const Book = mongoose.model("Book", bookSchema)
