@@ -1,9 +1,16 @@
-single book page
+<br><br><br>
 
 
 <h1>Title: {{book.title}}</h1>
 
-<h3>Author: {{book.author}}</h3>
+
+<a href="/authors/{{book.author._id}}">
+<h3>Author: {{book.author.name}}</h3>
+</a>
+
+
+<p>Donated by: {{book.donor.username}}</p>
+
 
 
 

@@ -10,8 +10,19 @@
 <p>Title</p>
 <input type="text" name="theNewBookTitle">
 
+
+
+
 <p>Author</p>
-<input type="text" name="theAuthorForNewBook">
+<select name="theAuthorForNewBook" id="">
+
+    {{#each allAuthors}}
+    <option value="{{this._id}}">{{this.name}}</option>
+    {{/each}}
+
+
+</select>
+
 
 
 <p>Image URL</p>

@@ -1,0 +1,29 @@
+<h2>{{author.name}}</h2>
+
+
+<hr>
+<hr>
+<hr>
+
+<p>HomeTown: {{author.hometown}}</p>
+
+
+<hr>
+
+<p>Born: {{author.birthdate}}</p>
+
+<br><br><br>
+
+<img style="width: 400px" src="{{author.image}}" alt="">
+
+<h3>Books by {{author.name}}</h3>
+
+<ul>
+{{#each books}}
+<a href="/books/{{this._id}}">
+<li>{{this.title}}</li>
+</a>
+
+{{/each}}
+
+</ul>

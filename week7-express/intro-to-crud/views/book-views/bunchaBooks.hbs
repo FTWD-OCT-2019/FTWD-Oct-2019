@@ -17,9 +17,12 @@ this is the buncha books page
         </h3>
     </a>
 
-    <h5>By: {{this.author}}</h5>
+    <h5>By: {{this.author.name}}</h5>
 
+
+    {{#if this.isMine}}
     <a href="/books/edit/{{this._id}}">Edit This Book</a>
+    {{/if}}
 
     <form action="/books/delete/{{this._id}}" method="POST">
     <button>Delete</button>

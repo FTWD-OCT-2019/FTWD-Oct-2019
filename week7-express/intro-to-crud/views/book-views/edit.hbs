@@ -13,7 +13,22 @@
 <input type="text" name="title" value="{{theActualBook.title}}">
 
 <p>Author</p>
-<input type="text" name="author" value="{{theActualBook.author}}" >
+<select name="author" id="">
+
+
+
+    {{#each authors}}
+
+    {{#if this.isThecorrectAuthor}}
+    <option selected="selected" value="{{this._id}}">{{this.name}}</option>
+    {{else}}
+    <option value="{{this._id}}">{{this.name}}</option>
+    {{/if}}
+    
+    {{/each}}
+
+
+</select>
 
 
 <p>Image URL</p>

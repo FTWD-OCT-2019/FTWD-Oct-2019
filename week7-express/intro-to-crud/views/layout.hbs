@@ -7,10 +7,10 @@
   <body>
 
 
-<div>
+<div class="navbar">
   <a href="/">Home</a>
-  <a href="/books/create">New Book</a>
   {{#if user}}
+  <a href="/books/create">New Book</a>
   <form action="/logout" method="POST">
   <button>Logout</button>
   </form>
