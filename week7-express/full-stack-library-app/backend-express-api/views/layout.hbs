@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+
+<div class="navbar">
+  <a href="/">Home</a>
+  {{#if user}}
+  <a href="/books/create">New Book</a>
+  <form action="/logout" method="POST">
+  <button>Logout</button>
+  </form>
+
+  {{else}}
+
+  <a href="/login">login</a>
+  <a href="/signup">signup</a>
+
+  {{/if}}
+
+
+</div>
+    {{{body}}}
+
+    <script src='/javascripts/script.js'></script>
+  </body>
+</html>
