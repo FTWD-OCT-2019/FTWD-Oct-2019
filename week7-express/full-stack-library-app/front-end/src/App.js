@@ -18,6 +18,20 @@ class App extends React.Component {
       ready: false,
     }
 
+    setFeedbackMessage = (arg, itIsSuccess)=>{
+      if(itIsSuccess){
+        this.setState({message: arg})
+      } else{
+        this.setState({error: arg})
+      }
+
+      setTimeout(() => {
+
+        this.setState({error: null, message: null})
+        
+      }, 5500);
+    }
+
 
 
     fetchAllData =  async () =>{
@@ -62,13 +76,21 @@ class App extends React.Component {
     }
 
 
-  
 
   render(){
     console.log('render function')
     console.log(this.state)
       return (
         <div>
+          <button onClick={this.setMessage}>click</button>
+          { this.state.message &&
+            <div className="successBox">Message: {this.state.message}</div>
+          }
+            
+          { this.state.error &&
+            <div className="errorBox">Error: {this.state.error}</div>
+          }
+
           <div>
             <Link to="/">Home</Link>
 
@@ -81,6 +103,7 @@ class App extends React.Component {
         
         <Route exact path='/' render={(props) => <Books
          {...props} 
+         setFlashMessage = {this.setFeedbackMessage}
          books={this.state.books} 
          ready={this.state.ready}
          user = {this.state.currentlyLoggedInUser}

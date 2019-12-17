@@ -37,14 +37,19 @@ export default class AddNewBook extends React.Component{
             withCredentials: true
         })
         .then((response)=>{
+
             this.setState({
                 newTitle: "",
                 newAuthor: null,
                 newImage: "",
             })
-            this.props.updateAll()
+
+            this.props.setFlashMessage('New Book added successfully', true)
+
+            this.props.updateAll()// this is the thing I run after i add a new book to make app component go back and get all the books all over again to make sure we have an updated list
         })
         .catch((err)=>{
+            this.props.setFlashMessage('sorry something went wrong creating new entry in the library.  please try again', false)
             console.log(err);
         })
 
@@ -52,7 +57,7 @@ export default class AddNewBook extends React.Component{
 
 
     render(){
-        console.log(this.state)
+        console.log(this.props)
         return(
             <div>
                 <form onSubmit={this.donateBook}>

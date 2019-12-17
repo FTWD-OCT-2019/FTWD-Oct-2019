@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.successBox{
+  background-color: greenyellow;
+  border-radius: 3px;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.errorBox{
+  background-color: #F17750;
+  border-radius: 3px;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}

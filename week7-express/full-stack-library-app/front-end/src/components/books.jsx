@@ -35,6 +35,7 @@ export default function Books(props){
 
                 {props.user &&
                 <AddNewBook 
+                setFlashMessage = {props.setFlashMessage}
                 authors={props.authors}
                 updateAll = {props.updateAll} 
                 />
