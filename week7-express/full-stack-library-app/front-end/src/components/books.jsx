@@ -7,10 +7,15 @@ import AddNewBook from './addnewbook';
 export default function Books(props){
 
    const showBooks = () =>{
+       const theStyle={width: '200px',
+        whiteSpace: 'nowrap',
+         overflow: 'scroll',
+         textOverflow: 'ellipsis'
+        }
         return props.books.map((eachBook)=>{
             return(
 
-                <h3 key={eachBook._id}>
+                <h3 style={theStyle} key={eachBook._id}>
                 <Link to={'/books/'+eachBook._id}>{eachBook.title}</Link>
                 </h3>
 
